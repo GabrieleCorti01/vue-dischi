@@ -1,7 +1,7 @@
 <template>
   <div>
       <div>
-          <img :src="img" alt=""> 
+          <h2>{{ author }}</h2>
       </div>
   </div>
 </template>
@@ -11,7 +11,7 @@
 
 export default {
     name: "AlbumElement",
-    props: ["img", "title"],
+    props: ["img", "author"],
 
 
 }

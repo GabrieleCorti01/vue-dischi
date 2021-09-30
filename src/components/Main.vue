@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper-container-album">
         <div class="row">
-            <div class="col-12 element-container" >
-                <AlbumElement />
+            <div v-for="element in albumList" :key="element.id">
+                <AlbumElement :title="element.author"/>
             </div>
         </div>
     </div>
@@ -28,8 +28,9 @@ export default {
     created: function(){
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
     .then((risposta) => {
-        this.albumList = risposta.data.results.slice();
+        this.albumList = risposta.data.response.slice();
         console.log(this.albumList)
+        
     })
 }
 
