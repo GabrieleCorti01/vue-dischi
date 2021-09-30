@@ -44,8 +44,9 @@ export default {
 
 .row{
     display: flex;
-    padding: 50px;
+    padding: 100px;
     flex-wrap: wrap;
+    background-color: $mainColor;
 }
 
 .album-container{

@@ -37,10 +37,12 @@ h2{
 
 .autore{
     color: $fontColor;
+    font-size: 1.5em;
 }
 
 .anno{
     color: $fontColor;
+    font-size: 1.2em;
 }
 
 </style>
