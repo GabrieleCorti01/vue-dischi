@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper-container-album">
         <div class="row">
-            <div v-for="(element, index) in albumList" :key="index" class="col-3 album">
-
+            <div class="col-12 element-container" >
+                <AlbumElement />
             </div>
         </div>
     </div>
@@ -10,9 +10,13 @@
 
 <script>
 import axios from 'axios';
+import AlbumElement from './components/AlbumElement.vue';
 
 export default {
     name: 'Main',
+    components : {
+        AlbumElement
+    },
 
     data: function(){
        return {
