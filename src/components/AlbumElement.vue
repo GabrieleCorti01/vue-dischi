@@ -1,12 +1,19 @@
 <template>
   <div>
-      <h2>Ciao</h2>
+      <div>
+          <img :src="img" alt=""> 
+      </div>
   </div>
 </template>
 
 <script>
+
+
 export default {
-    name: AlbumElement,
+    name: "AlbumElement",
+    props: ["img", "title"],
+
+
 }
 </script>
 

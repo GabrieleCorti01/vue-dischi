@@ -9,8 +9,9 @@
 </template>
 
 <script>
+
+import AlbumElement from './AlbumElement.vue';
 import axios from 'axios';
-import AlbumElement from './components/AlbumElement.vue';
 
 export default {
     name: 'Main',
@@ -23,13 +24,15 @@ export default {
            albumList: []
        }
     },
+
     created: function(){
-        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-        .then((risposta) => {
-            this.albumList = risposta.data.results.slice();
-            console.log(this.albumList)
-        })
-    }
+    axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+    .then((risposta) => {
+        this.albumList = risposta.data.results.slice();
+        console.log(this.albumList)
+    })
+}
+
     
 }
 
