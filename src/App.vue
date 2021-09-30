@@ -1,22 +1,25 @@
 <template>
   <div id="app">
+    <Header />
     <Main />
   </div>
 </template>
 
 <script>
 import Main from './components/Main.vue'
+import Header from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
-    Main
+    Main,
+    Header
   }
 }
 </script>
 
 <style lang="scss">
-@import './style/general.scss';
+@import './style/variable.scss';
 @import './style/general.scss';
 
 
@@ -26,6 +29,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  font-family: $mainFont;
+
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper-container-album">
         <div class="row">
-            <div v-for="element in albumList" :key="element.id">
-                <AlbumElement :title="element.author"/>
+            <div v-for="el in albumList" :key="el.id" class="album-container">
+                <AlbumElement :element="el"/>
             </div>
         </div>
     </div>
@@ -40,5 +40,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../style/variable.scss';
+
+.row{
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.album-container{
+    flex-basis: calc(100% / 5 - 30px);
+    background-color: $secondColor;
+    margin: 15px;
+    padding: 20px;
+}
+
 
 </style>
